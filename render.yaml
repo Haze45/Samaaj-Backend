@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: samaajbot-api
+    runtime: docker
+    plan: free
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+    disk:
+      name: samaajbot-data
+      mountPath: /app/data
+      sizeGB: 1
