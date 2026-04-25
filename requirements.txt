@@ -1,18 +1,20 @@
-fastapi
-sqlalchemy
-alembic
-python-jose[cryptography]
-passlib[bcrypt]
-python-multipart
+fastapi==0.136.1
+uvicorn==0.46.0
+sqlalchemy==2.0.49
+alembic==1.18.4
+python-jose[cryptography]==3.5.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.26
 pydantic[email]
-pydantic-settings
-aiofiles
+pydantic-settings==2.14.0
+aiofiles==25.1.0
 
 # GenAI / LangChain
-langchain
-langchain-community
-langchain-google-genai
-langchain-chroma
-chromadb
-pypdf
-google-generativeai
+langchain==1.2.15
+langchain-community==0.4.1
+langchain-text-splitters==1.1.2
+langchain-google-genai==4.2.2
+langchain-chroma==1.1.0
+chromadb==1.5.8
+pypdf==6.10.2
+google-generativeai==0.8.6
