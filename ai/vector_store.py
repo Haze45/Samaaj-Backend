@@ -1,4 +1,3 @@
-import os
 from typing import Optional
 from langchain_chroma import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
@@ -23,7 +22,12 @@ def load_store(community_id: int) -> Optional[Chroma]:
         embedding_function=_embeddings(),
         persist_directory=settings.CHROMA_DIR,
     )
-    if store._collection.count() == 0:
+    # chromadb 1.x uses .count() directly on the collection
+    try:
+        count = store._collection.count()
+    except Exception:
+        count = 0
+    if count == 0:
         return None
     return store
 
