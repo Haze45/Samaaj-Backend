@@ -1,6 +1,6 @@
 import os
 from langchain_community.document_loaders import PyPDFLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from ai.vector_store import add_documents_to_store
 from core.config import settings
 
@@ -9,7 +9,6 @@ def ingest_pdf(community_id: int, filename: str) -> int:
     """
     Load a PDF, split into chunks, embed and store in ChromaDB.
     Returns the number of chunks created.
-    Automatically called in background after a document is uploaded.
     """
     file_path = os.path.join(settings.UPLOAD_DIR, filename)
 
@@ -17,7 +16,7 @@ def ingest_pdf(community_id: int, filename: str) -> int:
     loader = PyPDFLoader(file_path)
     pages  = loader.load()
 
-    # 2. Split into overlapping chunks for better retrieval
+    # 2. Split into overlapping chunks
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=800,
         chunk_overlap=100,
