@@ -6,7 +6,7 @@ from core.config import settings
 
 def _embeddings() -> GoogleGenerativeAIEmbeddings:
     return GoogleGenerativeAIEmbeddings(
-        model="models/embedding-001",
+        model="models/embedding-004",
         google_api_key=settings.GEMINI_API_KEY,
     )
 
