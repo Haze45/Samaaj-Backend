@@ -1,0 +1,59 @@
+# ── Environment and secrets ───────────────────────────
+.env
+*.env
+
+# ── Database ──────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Uploads and AI data ───────────────────────────────
+uploads/
+chroma_db/
+qdrant_storage/
+vectors/
+
+# ── Firebase credentials (NEVER push these) ───────────
+firebase-credentials.json
+serviceAccountKey.json
+*-firebase-adminsdk-*.json
+
+# ── Python ────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.py[cod]
+*$py.class
+
+# ── Virtual environments ──────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Distribution / packaging ──────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+
+# ── Logs ──────────────────────────────────────────────
+*.log
+logs/
+
+# ── OS generated files ────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ── IDE ───────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+
+# ── Testing ───────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
