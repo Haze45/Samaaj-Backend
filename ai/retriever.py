@@ -15,7 +15,7 @@ Level 3 - Hybrid Search with Reranking
 
 import re
 import logging
-from langchain_community.retrievers import EnsembleRetriever
+from langchain_classic.retrievers import EnsembleRetriever
 from langchain_community.retrievers import BM25Retriever
 from ai.vector_store import load_store, get_all_documents
 
