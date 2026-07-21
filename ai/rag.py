@@ -79,8 +79,7 @@ def get_answer(
     # 1. Get the best retriever for this community
     retriever = get_best_retriever(
         community_id=community_id,
-        k=4,
-        mode=retriever_mode
+        question=question
     )
 
     if retriever is None:
