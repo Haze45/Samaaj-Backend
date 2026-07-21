@@ -21,9 +21,9 @@ pypdf==6.10.2
 google-generativeai==0.8.6
 python-docx
 python-pptx
-sentence-transformers>=3.0.0
-torch>=2.2.0
-transformers>=4.45.0
+# sentence-transformers>=3.0.0
+# torch>=2.2.0
+# transformers>=4.45.0
 
 firebase-admin
 rank-bm25
